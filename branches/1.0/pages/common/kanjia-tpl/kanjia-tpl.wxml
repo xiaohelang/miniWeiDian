@@ -1,0 +1,14 @@
+<template name="iskanjia">
+  <view class='group-box'>
+    <image class='product-img' src='{{ productImg }}' />
+    <view class='product-message'>
+      <text class='pro-title'>{{ title }}</text>
+      <text class='group-message'>{{ des_title }}</text>
+      <view class='product-price'>
+        <text class='odd-price'>原价：￥{{ originalPrice }}</text>
+         <text class='new-price' wx:if="{{ isMinCurret }}">当前：￥{{ price }}</text> 
+         <text class='new-price' wx:if="{{ !isMinCurret }}">最低：￥{{ lowPrice }}</text> 
+      </view>
+    </view>
+  </view>
+</template>

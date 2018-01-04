@@ -1,0 +1,11 @@
+<template name="isUser">
+  <view class='author-relative'>
+    <view class='all-author'>
+      <view class='author-head' wx:for="{{userItems}}">
+         <image class='userHeader' src='{{ item.headImgUrl }}' />
+          <text class='author-icon' wx:if="{{ item.isHost }}">拼主</text> 
+      </view>
+      <text class='quest'>?</text> 
+    </view>
+  </view>
+</template>

@@ -1,0 +1,10 @@
+<template name="isgroup">
+  <view class='group-box'>
+    <image class='product-img' src='{{ productImg }}' />
+    <view class='product-message'>
+      <text class='pro-title'>{{ title }}</text>
+      <text class='group-message'>{{ groupSize }}人拼单•已拼{{ salesVolume }}件</text>
+      <text class='product-price'>￥{{ groupPrice }}</text>
+    </view>
+  </view>
+</template>

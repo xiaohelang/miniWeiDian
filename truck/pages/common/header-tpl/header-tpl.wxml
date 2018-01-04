@@ -1,0 +1,14 @@
+<template name="isHeader">
+  <view class='header-contens'>
+    <image class="head-bg" src='{{ background }}'></image>
+    <view class='header-box'>
+      <view class='header-logo'>
+        <image class='shop-logo' src='{{ shopLogo }}'></image>
+        <view class='shop-msg'>
+          <text class='shop-name'>{{ shopName }}</text>
+          <text class='certified'>未认证</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

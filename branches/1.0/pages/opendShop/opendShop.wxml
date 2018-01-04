@@ -1,0 +1,23 @@
+<!--pages/opendShop/opendShop.wxml-->
+<import src="../common/header-tpl/header-tpl.wxml"/>
+<view class='shop-head-box'>
+ <template is="isHeader" data="{{...shopInfo}}" />
+</view>  
+ <view class="shop-content">
+  <view class="produst-box">
+  <block wx:for="{{ produstList }}">
+    <view class="produst-list" data-id="{{ item.vShopProductGuid }}" bindtap="tapDetail">
+      <!--vGroupProductType	活动类型：0. 无活动 1. 拼团 2. 砍价-->
+      <image wx:if="{{ item.vGroupProductType == 1}}" class='activeType' src='../../images/ping.png' />
+      <image wx:elif="{{ item.vGroupProductType ==2 }}" class='activeType' src='../../images/kan.png' />
+      <image class="produst-img" src='{{ item.shopProductLogo }}'></image> 
+      <text class="produst-title">{{ item.vShopProductName }}</text>
+      <view class="price-box">
+        <text class="unit">￥</text>
+        <text class="price">{{ item.price }}</text>
+      </view>
+    </view>
+  </block>
+  </view>
+</view>
+<loading hidden="{{loadingHidden}}">加载中...</loading> 

@@ -1,0 +1,24 @@
+<!--pages/groupDetail/groupDetail.wxml-->
+<import src="../common/group-tpl/group-tpl.wxml" />
+<import src="../common/labelInfo-tpl/labelInfo-tpl.wxml" />
+<import src="../common/user-tpl/user-tpl.wxml" />
+
+<view class='container'>
+  <view class='groupTemp'>
+    <template is="isgroup" data="{{...items}}" />
+  </view>
+  <template is="isLabel" />
+  <view class='group-model'>
+    <template is="isUser" data="{{userItems}}" />
+    <text class='group-text' wx:if="{{ isGroupState }}">仅剩{{ items.peopleNumber }}个名额，{{ countDown }}</text>
+    <text class='group-text' wx:if="{{ !isGroupState }}">{{ groupInfoText }}</text>
+    <text class='together-btn' wx:if="{{ !isDefaultOperat && isGroupState }}">一键拼单</text>
+    <text class='together-btn'wx:if="{{ isDefaultOperat }}">分享拼单</text>
+    <text class='together-btn' wx:if="{{ !isGroupState }}">去开团</text>
+  </view>
+
+  <view class='spelling-note'>
+    <text style='color:#333'>拼单须知</text>
+    <text style='float:right'>好友拼单·人满发货·人不满退款</text>
+  </view>
+</view>

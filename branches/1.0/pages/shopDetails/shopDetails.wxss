@@ -1,0 +1,3 @@
+/* pages/shopDetails/shopDetails.wxss */
+@import "../common/header-tpl/header-tpl.wxss";
+@import "../../wxParse/wxParse.wxss";

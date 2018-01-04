@@ -1,0 +1,46 @@
+.produst-boxs{
+  display: flex;
+  flex-direction: row;
+  
+}
+.produstImg{
+  width: 168rpx;
+  height: 168rpx;
+  margin: 0 21rpx 0 24rpx;
+}
+.order-infor{
+  width: 505rpx;
+  display: flex;
+  flex-direction: column;
+}
+.infortion-box{
+  display: flex;
+  flex-direction: row;
+}
+.informatName{
+  width: 300rpx;
+  font-size: 28rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.contansSpec{
+  font-size: 24rpx;
+}
+.line-throuht{
+  text-decoration: line-through;
+}
+.spec-margin{
+  margin-top: 20rpx;
+  color: #8E8E8E;
+}
+.shop-price{
+  font-size: 28rpx;
+  color: #F96C9E;
+}
+.posit-pics{
+  position: absolute;
+  right: 35rpx;
+}

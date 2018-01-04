@@ -1,0 +1,76 @@
+/* pages/myOrder/myOrder.wxss */
+@import "../common/vshop-tpl/vshop-tpl.wxss";
+@import "../common/goodsInfo-tpl/goodsInfo-tpl.wxss";
+
+page{
+  background: #f4f4f4;
+}
+.tapOrder-box{
+  display: flex;
+  flex-direction: row;
+  height: 90rpx;
+  line-height: 90rpx;
+  background: #fff;
+  font-size: 24rpx;
+  border-top: 1px solid #E8E8E8;
+}
+.tabList{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+}
+.on{
+  color: #F96C9E;
+  border-bottom: 2rpx solid #F96C9E;
+}
+.order-list{
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  margin-top: 11rpx;
+}
+.order-goods-box{
+  background: rgb(244, 244, 244);
+  padding: 18rpx 0;
+}
+.order-modle{
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 24rpx;
+  color: #333;
+  padding: 0 36rpx;
+}
+.true-play{
+  float: right
+}
+.priceColor{
+  color: #F96C9E;
+  font-size: 32rpx;
+}
+.footer-box{
+  display: flex;
+  flex-direction: row;
+  height: 80rpx;
+  align-items: center;
+  border-top: 1px solid #E8E8E8;
+  justify-content: flex-end;
+  padding: 0 36rpx;
+}
+.public-btn{
+  width: 150rpx;
+  /* height: 55rpx; */
+  line-height: 55rpx;
+  border-radius: 30rpx;
+  font-size: 28rpx;
+  border: 1px solid #8E8E8E;
+  text-align: center;
+  color: #8E8E8E;
+  box-sizing:border-box;
+  margin-left: 19rpx;
+}
+.play-modle{
+  background: #F96C9E;
+  color: #fff;
+  border: 1px solid #F96C9E;
+}

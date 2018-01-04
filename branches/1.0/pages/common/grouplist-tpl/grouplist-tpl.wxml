@@ -1,0 +1,10 @@
+<template name="isgroupList">
+ <view class='group-list'>
+    <image class="group-head" src='{{ headImgUrl }}' />
+    <view class='group-content'>
+      <text class='group-name'>{{ memberName }}</text>
+      <text class='group-time'>还差{{ peopleNumber }}人，剩余23:42:52</text>
+    </view>
+    <text class='group-btn'>去开团</text>
+  </view>
+</template>

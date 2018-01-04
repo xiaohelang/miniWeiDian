@@ -1,0 +1,17 @@
+.proTitle{
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+  font-size: 28rpx;
+  padding: 0 36rpx;
+}
+.shopLogo{
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 11rpx;
+}
+.play-state{
+  color: #F96C9E;
+  position: absolute;
+  right: 36rpx;
+}

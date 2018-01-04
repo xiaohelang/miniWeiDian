@@ -1,0 +1,51 @@
+/* pages/opendShop/opendShop.wxss */
+@import "../common/header-tpl/header-tpl.wxss";
+
+page{
+  background: #eee
+}
+.shop-head-box{
+  margin-bottom: 13rpx;
+}
+.produst-box{
+  height: auto;
+  overflow: hidden
+}
+.produst-list{
+  display: flex;
+  flex-direction: column;
+  width: 368rpx;
+  height: 496rpx;
+  background: #fff;
+  float: left;
+  margin-bottom: 14rpx;
+  position: relative;
+}
+.activeType{
+  width: 48rpx;
+  height: 57rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.produst-list:nth-child(2n){
+  float: right;
+}
+.produst-img{
+  width: 368rpx;
+  height: 368rpx;
+}
+.produst-title{
+  font-size: 26rpx;
+  padding: 24rpx 21rpx 10rpx 21rpx
+}
+.price-box{
+  color: #F96C9E;
+  padding-left: 19rpx;
+}
+.unit{
+  font-size: 20rpx;
+}
+.price{
+  font-size: 35rpx
+}

@@ -1,0 +1,47 @@
+/* pages/groupDetail/groupDetail.wxss */
+@import "../common/group-tpl/group-tpl.wxss";
+@import "../common/labelInfo-tpl/labelInfo-tpl.wxss";
+@import "../common/user-tpl/user-tpl.wxss";
+page{
+  background: #f4f4f4;
+}
+.container{
+  border-top: 1px solid #e8e8e8;
+}
+.groupTemp{
+  background: #fff;
+  padding: 9rpx 12rpx;
+}
+.group-model{
+  margin-top: 13rpx;
+  background: #fff;
+  padding: 65rpx 25rpx;
+}
+.group-text{
+  display: block;
+  text-align: center;
+  font-size: 30rpx;
+  color: #8E8E8E
+}
+.together-btn{
+  display: block;
+  width: 580rpx;
+  height: 72rpx;
+  background: #f96c9e;
+  line-height: 72rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 32rpx;
+  margin: auto;
+  margin-top: 50rpx;
+  border-radius: 72px; 
+}
+.spelling-note{
+  background: #ffffff;
+  padding: 0 25rpx;
+  margin: 15rpx 0 0 0;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 28rpx;
+  color: #8e8e8e;
+}

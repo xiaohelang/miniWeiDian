@@ -1,0 +1,10 @@
+<!--pages/shopDetails/shopDetails.wxml-->
+<import src="../common/header-tpl/header-tpl.wxml"/>
+<import src="../../wxParse/wxParse.wxml"/>
+<view class='shop-head-box'>
+ <template is="isHeader" data="{{...shopInfo}}" />
+</view>
+<!-- <view>{{ shopInfo.vShopIntro }}</view> -->
+<view>
+  <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>

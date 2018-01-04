@@ -1,0 +1,7 @@
+<template name="isVshop">
+  <view class='proTitle'>
+    <image class='shopLogo' src='../../images/shop-icon.png' />
+    <text>{{ shopName }}</text>
+    <text class='play-state'>{{ stateType }}</text>
+  </view>
+</template>

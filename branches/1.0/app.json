@@ -1,0 +1,56 @@
+{
+  "pages":[
+    "pages/group/group",
+    "pages/groupSuccess/groupSuccess",
+    "pages/me/me",
+    "pages/KanList/KanList",
+    "pages/kanJiaDetail/kanJiaDetail",
+    "pages/groupDetail/groupDetail",
+    "pages/opendShop/opendShop",
+    "pages/myOrder/myOrder",
+    "pages/orderPage/orderPage",
+    "pages/shopDetails/shopDetails",
+    "pages/orderDetails/orderDetails",
+    "pages/details/details",
+    "pages/editAddress/editAddress",
+    "pages/addressList/addressList",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "selectedColor": "#f96c9e",
+    "list": [
+      {
+        "pagePath": "pages/logs/logs",
+        "iconPath": "images/icon-shop.png",
+        "selectedIconPath": "images/selet-shop.png",
+        "text": "我要开店"
+      },
+      {
+        "pagePath": "pages/opendShop/opendShop",
+        "iconPath": "images/icon-shop1.png",
+        "selectedIconPath": "images/selet-shop1.png",
+        "text": "店铺商品"
+      },
+      {
+        "pagePath": "pages/shopDetails/shopDetails",
+        "iconPath": "images/icon-shop2.png",
+        "selectedIconPath": "images/selet-shop2.png",
+        "text": "店铺详情"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "iconPath": "images/icon-shop3.png",
+        "selectedIconPath": "images/selet-shop3.png",
+        "text": "会员中心"
+      }
+
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+.group-list{
+  display: flex;
+  flex-direction: row;
+}
+.group-head{
+  width: 74rpx;
+  height: 74rpx;
+  border-radius: 50%;
+}
+.group-content{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+  color: #8E8E8E
+}
+.group-name{
+  font-size: 24rpx;
+}
+.group-time{
+  font-size: 20rpx;
+  margin-top: 15rpx;
+}
+.group-btn{
+  width: 100rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  font-size: 24rpx;
+  color: #F96C9E;
+  border:1px solid #F96C9E;
+  border-radius: 7rpx;
+  text-align: center;
+  position: absolute;
+  right: 24rpx;
+  margin-top: 12rpx;
+}

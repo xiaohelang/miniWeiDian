@@ -1,0 +1,51 @@
+/* pages/addAddress/addAddress.wxss */
+page{
+  background: #f4f4f4;
+}
+.address-conten{
+  display: flex;
+  flex-direction: column;
+  border-top: 2rpx solid #E8E8E8;
+}
+.edit-content{
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  font-size: 28rpx;
+}
+.edit-box{
+  display: flex;
+  flex-direction: row;
+  height: 97rpx;
+  border-bottom: 2rpx solid #E8E8E8;
+}
+.edit-label{
+  width: 150rpx;
+  line-height: 97rpx;
+  padding: 0 15rpx 0 33rpx;
+}
+.editInput{
+  width: 500rpx;
+  height: 97rpx;
+  line-height: 97rpx;
+}
+.detailed-addres{
+  width: 690rpx;
+  height: 130rpx;
+  padding: 35rpx 31rpx;
+}
+.default-modle{
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin-top: 11rpx;
+  font-size: 28rpx;
+}
+.circle-box{
+  margin: 23rpx 10rpx 0 30rpx;
+}
+.default-color{
+  color: #F96C9E;
+}

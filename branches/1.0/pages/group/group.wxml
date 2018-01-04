@@ -1,0 +1,26 @@
+<!--pages/group/group.wxml-->
+<import src="../common/group-tpl/group-tpl.wxml" />
+<view class='container'>
+  <block wx:if="{{ listArray.length > 0 }}">
+    <view class='list-box' wx:for="{{ listArray }}" wx:for-item="items">
+      <view class='title-box'>
+        <text>{{ items.releseTime }}</text>
+        <text class='title-start'>{{ items.stateType}}</text>
+      </view>
+      <view class='groupTemp'>
+        <template is="isgroup" data="{{...items}}" />
+      </view>
+      <view class='group-footer'>
+        <image class="char-avt" wx:if="{{ items.headImgUrl != '' }}" src='{{ items.headImgUrl }}' /> 
+        <text class='char-quest' wx:else>?</text>
+        <text>{{ items.message }}</text>
+        <text class='char-detail' data-groupState="{{ items.vGroupOrderState }}" data-vOrderGuid="{{ items.vOrderGuid }}" data-vGroupOrderGuid="{{ items.vGroupOrderGuid }}" bindtap="jumpGroupDetail">查看详情</text>
+      </view>
+    </view>
+  </block>
+  <!--没数据-->
+  <view class='public-nothing' wx:else>
+    <image class='dataIcon' src='../../images/nodata.png' />
+    <text>暂无数据</text>
+  </view>
+</view>

@@ -1,0 +1,27 @@
+<!--pages/addAddress/addAddress.wxml-->
+<view class='address-conten'>
+  <view class='edit-content'>
+    <view class='edit-box'>
+      <text class='edit-label'>收货人</text>
+      <input class='editInput' name="userName" value='{{ userName }}' bindinput="userNameInput" type='text' placeholder="请输入姓名" />
+    </view>
+    <view class='edit-box'>
+      <text class='edit-label'>联系电话</text>
+      <input class='editInput' name="userInphone" maxlength="11" value='{{ userInphone }}' bindinput="userInphoneInput" type='number' placeholder="请输入手机号码" />
+    </view>
+    <view class='edit-box'>
+      <text class='edit-label'>所在地区</text>
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker" class='editInput'>{{region[0]}} {{region[1]}} {{region[2]}}</view>
+      </picker>
+    </view>
+    <textarea class='detailed-addres' name="userDetailAddress" value='{{ userDetailAddress }}' bindinput="userDetailAddressInput" placeholder="请填写详细地址" />
+  </view>
+  <view class='default-modle'>
+    <icon class='circle-box' bindtap='seletDefault' wx:if="{{ !isDefault }}" type="{{ iconType[0] }}" size="20" color="#F96C9E" />
+    <icon class='circle-box' bindtap='seletDefault' wx:else type="{{ iconType[1] }}" size="20" color="#F96C9E" />
+    <text class='default-color'>默认地址</text>
+  </view>
+  <view class='submit-btn' bindtap="submiBtn" wx:if="{{ !buttonState }}">保存</view>
+  <view class='submit-btn' bindtap="updataBtn" wx:else>修改地址</view>
+</view>

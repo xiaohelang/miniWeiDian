@@ -1,0 +1,44 @@
+.group-box {
+  height: auto;
+  overflow: hidden;
+}
+
+.product-img {
+  width: 170rpx;
+  height: 170rpx;
+  float: left;
+}
+
+.product-message {
+  display: flex;
+  flex-direction: column;
+  width: 510rpx;
+  float: left;
+  margin-left: 20rpx;
+}
+
+.pro-title {
+  font-size: 28rpx;
+  line-height: 35rpx;
+  color: #333;
+  -webkit-text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.group-message {
+  font-size: 27rpx;
+  color: #8e8e8e;
+  padding: 15rpx 0 25rpx 0;
+}
+
+.product-price {
+  font-size: 40rpx;
+  color: #f96c9e;
+}
+
+.price-sym {
+  font-size: 28rpx;
+}

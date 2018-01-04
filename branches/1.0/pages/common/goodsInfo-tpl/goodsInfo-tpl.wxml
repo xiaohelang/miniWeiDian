@@ -1,0 +1,15 @@
+<template name="isgoods">
+  <view class='produst-boxs'>
+    <image class='produstImg' src='{{ productImg }}' />
+    <view class='order-infor'>
+      <view class='infortion-box'>
+        <text class='informatName'>{{ title }}</text>
+        <text class='shop-price posit-pics'>￥{{ price }}</text>
+      </view>
+      <view class='infortion-box spec-margin'>
+        <text class='informatName contansSpec'>{{ des_title }}</text>
+        <text class='contansSpec line-throuht posit-pics'>￥{{ marketPrice }}</text>
+      </view>
+    </view>
+  </view>
+</template>

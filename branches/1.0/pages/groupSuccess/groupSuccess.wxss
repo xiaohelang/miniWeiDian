@@ -1,0 +1,73 @@
+/* pages/groupSuccess/groupSuccess.wxss */
+@import "../common/user-tpl/user-tpl.wxss";
+
+page{
+  background: #f4f4f4;
+}
+.container{
+  border-top: 1px solid #e8e8e8;
+}
+.group-model{
+  background: #fff;
+  padding: 65rpx 25rpx;
+}
+.lable-title{
+  width: 200rpx;
+}
+.aut-places{
+  font-size: 32rpx;
+  color: #f96c9e;
+  text-align: center;
+}
+.s-people{
+  display: block;
+  font-size: 32rpx;
+  margin: 20rpx 0 0 0;
+  color: #8e8e8e;
+  text-align: center;
+}
+.consum-code{
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  margin-top: 11rpx;
+}
+.code-text{
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  padding: 0 36rpx;
+  border-bottom: 1px solid #E8E8E8
+}
+.codeImg{
+  width: 200rpx;
+  height: 200rpx;
+  margin: auto;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+.address-messages{
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  margin-top: 15rpx;
+}
+.address-box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 28rpx;
+  color: #333;
+  padding: 30rpx 25rpx;
+}
+.addressModel{
+  width: 500rpx;
+  color: #8E8E8E;
+  text-align: right;
+}
+        
+      
+        
+        
+      

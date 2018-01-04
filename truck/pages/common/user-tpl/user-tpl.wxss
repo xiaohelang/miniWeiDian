@@ -1,0 +1,54 @@
+.author-relative {
+  height: 120rpx;
+  position: relative;
+  margin-bottom: 60rpx;
+}
+
+.all-author {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+
+.author-head {
+  width: 120rpx;
+  height: 120rpx;
+  position: relative;
+  margin-right: 20rpx;
+}
+
+.userHeader {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 100%;
+}
+
+.author-icon {
+  background: #f96c9e;
+  height: 30rpx;
+  line-height: 32rpx;
+  font-size: 16rpx;
+  width: 58rpx;
+  position: absolute;
+  bottom: 0rpx;
+  right: 0;
+  color: #fff;
+  text-align: center;
+  border-radius: 25rpx;
+}
+
+.quest {
+  width: 120rpx;
+  height: 120rpx;
+  border: 1px dashed #8e8e8e;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  line-height: 122rpx;
+  color: #8e8e8e;
+  box-sizing: border-box;
+}

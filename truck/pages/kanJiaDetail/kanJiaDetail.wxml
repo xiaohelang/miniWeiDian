@@ -1,0 +1,61 @@
+<!--pages/kanJiaDetail/kanJiaDetail.wxml-->
+<import src="../common/kanjia-tpl/kanjia-tpl.wxml"/>
+<view class='container'>
+  <view class='kanbox'>
+    <template is="iskanjia" data="{{...items}}" />
+  </view>
+  <view class='kan-zhu'>
+    <image class='kan-zhu-logo' src='{{ items.userHead}}' />
+    <text class='kan-zhu-p'>{{ items.userText }}</text>
+  </view>
+  <view class='pai'>
+    <view class='pai-title'>
+      <text style='height: 80rpx; line-height: 80rpx; font-size: 32rpx; color: #fff;'>还差：￥{{ items.chaPrice }}</text>
+      <text style='height: 80rpx; line-height: 80rpx; font-size: 32rpx; color: #fff;'>已砍：￥{{ items.kanPrice }}</text>
+      <image class='title-img' style='left: 0' src='../../images/left-arr.png' />
+      <image class='title-img' style='right: 0' src='../../images/right-arr.png' />
+    </view>
+  </view>
+  <view class='pai-list'>
+    <view class='cell-title'>
+      <text>截止时间：{{ items.date }}</text>
+      <text>{{ items.time }}</text>
+    </view>
+    <text class='together-btn' wx:if="{{ !isHost&&!isKan}}" bindtap="helpKan">帮他砍价</text>
+    <view class='together-ul' wx:if="{{ !isHost&&isKan }}">
+      <text class='together-li' style="background: #f96c9e; color: #ffffff;">我也想要</text>
+      <text class='together-li bg-color'>找人砍价</text>
+    </view>
+    <view class='together-ul' wx:if="{{ isHost }}">
+      <text class='together-li' style="background: #f96c9e; color: #ffffff;">现价￥{{ items.nowPrice }}</text>
+      <text class='together-li bg-color'>找人砍价</text>
+    </view>
+    <view class='sm-btn'>
+      <text style='text-decoration: underline' bindtap='openShow'>活动说明</text>
+    </view>
+    <view class='kan-pan'>
+      <text class='kan-pan-text'>砍价榜</text>
+    </view>
+    <view class='pai-ul'>
+      <view class='pai-li' wx:for="{{ userList }}">
+        <view class='pai-li-left'>
+          <image style='width: 48rpx; height: 48rpx; margin-right: 17rpx; border-radius: 50%;' src='{{ item.headImgUrl }}' />
+          <text style='font-size: 24rpx; line-height: 48rpx; color: #8e8e8e;'>{{ item.message }}</text>
+        </view>
+        <text class='pai-li-right'>已砍：￥{{ item.deductPrice }}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<!--砍价说明-->
+<view class='showMode' wx:if="{{ showHidden }}">
+  <view class='showMore'>
+    <text class='closeBtn' bindtap='closeShow'>X</text>
+    <text class='showMoreH4'>砍价说明</text>
+    <text class='showMoreP1'>最低价成交</text>
+    <text class='showMoreP2'>如商品原价100元，商户设定最低成交价为50元。这时，你可以分享此商品信息给好友，邀请他们帮你进行砍价。越多好友帮忙，价钱越低。在截止时间前如砍价至商户设定的最低成交价（此示例为50元）则，按照最低成交价结算。</text>
+    <text class='showMoreP1'>实时金额成交</text>
+    <text class='showMoreP2'>如商品原价100元，商户设定最低成交价为50元。这时，你可以分享此商品信息给好友，邀请他们帮你进行砍价。越多好友帮忙，价钱越低。当时间截止后未砍价至最低成交价，则按照砍价后的实时金额进行结算。</text>
+  </view>
+</view>
+<!--end-->

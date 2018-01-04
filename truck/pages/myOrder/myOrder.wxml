@@ -1,0 +1,37 @@
+<!--pages/myOrder/myOrder.wxml-->
+<import src="../common/vshop-tpl/vshop-tpl.wxml"/>
+<import src="../common/goodsInfo-tpl/goodsInfo-tpl.wxml"/>
+
+<view class='container'>
+  <view class='tapOrder-box'>
+    <block wx:for="{{ tabData }}">
+      <text class='tabList {{currentTab==index ? "on" : ""}}' data-current="{{ index }}" bindtap="tabSwitch">{{ item }}</text>
+    </block>
+  </view>
+  <!--内容部分-->
+  <block wx:if="{{ listDatas.length > 0 }}">
+    <view class='order-list' wx:for="{{ listDatas }}" wx:for-item="listItem">
+      <template is="isVshop" data="{{...listItem}}" />
+      <view class='order-goods-box' data-vOrderGuid="{{ listItem.vOrderGuid }}" bindtap='jumOrder'>
+        <template is="isgoods" data="{{...listItem}}" />
+      </view>
+      <view class='order-modle'>
+        <text>共 {{ listItem.num }} 件商品</text>
+        <text class='true-play'>实付 <text class='priceColor'>￥{{ listItem.totalMoney }}</text></text>
+      </view>
+      <view class='footer-box' wx:if="{{ listItem.type_value == 1 }}">
+        <text class='public-btn' data-vOrderGuid="{{ listItem.vOrderGuid }}" bindtap='cancelBtn'>取消订单</text>
+        <text class='public-btn play-modle'>付款</text>
+      </view>
+      <view class='footer-box' wx:elif="{{ listItem.type_value == 2 }}">
+        <text class='public-btn' data-vOrderGuid="{{ listItem.vOrderGuid }}" bindtap='jumOrder'>查看详情</text>
+      </view>
+    </view>
+  </block>
+  <!--没有数据-->
+  <view class='public-nothing' wx:else>
+    <image class='dataIcon' src='../../images/nodata.png' />
+    <text>暂无数据</text>
+  </view>
+  <!--end-->
+</view>

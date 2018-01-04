@@ -1,0 +1,33 @@
+<!--pages/KanList/KanList.wxml-->
+<import src="../common/kanjia-tpl/kanjia-tpl.wxml"/>
+
+<view class='container'>
+  <view class='header-box'>
+    <view class='share-tab'>
+      <block wx:for="{{ tabData }}">
+        <text class='flex-box {{currentTab==index ? "on" : ""}}' data-current="{{ index }}" bindtap="tabSwitch">{{ item }}</text>
+      </block>
+    </view>
+  </view>
+  <!--列表内容-->
+  <block wx:if="{{ listData.length > 0 }}">
+    <view class='list-box' wx:for="{{ listData }}" wx:for-item="items">
+      <view class='title-box'>
+        <text>{{ items.kanJiaState }}</text>
+        <text class='title-start'>已砍：￥{{ items.kanRrices }}</text>
+      </view>
+      <view>
+        <template is="iskanjia" data="{{...items}}" />
+      </view>
+      <view class='group-footer'>
+        <text>{{ items.releseTime }}</text>
+        <text class='char-detail' data-vGroupProductLogGuid="{{ items.vGroupProductLogGuid }}" bindtap='jumpKanDetail'>查看详情</text>
+      </view>
+    </view>
+  </block>
+  <view class='public-nothing' wx:else>
+    <image class='dataIcon' src='../../images/nodata.png' />
+    <text>暂无数据</text>
+  </view>
+  
+</view>

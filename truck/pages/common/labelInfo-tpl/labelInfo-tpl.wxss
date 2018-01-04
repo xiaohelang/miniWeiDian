@@ -1,0 +1,25 @@
+.public-detais-box{
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  margin-top: 11rpx;
+}
+.service-des{
+  padding: 30rpx 24rpx;
+  height: 42rpx;
+  display: flex;
+  flex-direction: row;
+  font-size: 24rpx;
+  line-height: 42rpx;
+  color: #8E8E8E;
+}
+.des-disbox{
+  display: flex;
+  flex-direction: row;
+  margin-right: 27rpx;
+}
+.des-icon{
+  width: 42rpx;
+  height: 42rpx;
+  margin-right: 12rpx;
+}

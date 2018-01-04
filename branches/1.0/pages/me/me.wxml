@@ -1,0 +1,64 @@
+<!--pages/me/me.wxml-->
+<view class='container'>
+  <view class='userHeaderBox'>
+     <image class='user-bg' src='../../images/user-bg.jpg' />
+     <view class='userInfo-box'>
+       <image class='avr-head' src='{{ userInfo.headImgUrl }}' />
+       <view class='usermsg'>
+         <text>昵称：{{ userInfo.memberName }}</text>
+         <text class='iphoneInfo'>手机号码：{{ userInfo.mobilePhone }}</text>
+       </view>
+     </view>
+  </view>
+  <view class='userOrderBox'>
+    <view class='allOrder-box'>
+      <text>我的订单</text>
+      <text class='readAll' data-currentTab="0" bindtap="jumpallOrder">查看全部订单</text>
+      <text class='right-arrow arrowIcon'></text>
+    </view>
+    <view class='order-tab'>
+      <view class='tabList' data-currentTab="1" bindtap="jumpallOrder">
+        <view class='tabPosition'>
+          <image class='tabIcon' src='../../images/center-ionc1.png' />
+          <text class='tabNum' wx:if="{{ iconData.awaitPayOrderCount > 0 }}">{{ iconData.awaitPayOrderCount }}</text>
+        </view>
+        <text>待付款</text>
+      </view>
+      <view class='tabList' data-currentTab="2" bindtap="jumpallOrder">
+        <view class='tabPosition'>
+          <image class='tabIcon' src='../../images/center-ionc3.png' />
+          <text class='tabNum' wx:if="{{ iconData.awaitDeliveryOrderCount > 0 }}">{{ iconData.awaitDeliveryOrderCount }}</text>
+        </view>
+        <text>待发货</text>
+      </view>
+      <view class='tabList' data-currentTab="3" bindtap="jumpallOrder">
+        <view class='tabPosition'>
+          <image class='tabIcon' src='../../images/center-ionc4.png' />
+          <text class='tabNum' wx:if="{{ iconData.deliveryOrderCount > 0 }}">{{ iconData.deliveryOrderCount }}</text>
+        </view>
+        <text>待收货</text>
+      </view>
+    </view>
+  </view>
+  <view class='user-model'>
+    <view class='public-user-box' bindtap='jumAddress'>
+      <image class='addresIcon' src='../../images/addres-icon.png' />
+      <text>收货地址</text>
+      <text class='defual-adders'>默认地址</text>
+      <text class='right-arrow arrowIcon arrowTo'></text>
+    </view>
+  </view>
+  <view class='user-model'>
+    <view class='public-user-box' bindtap='jumpKanJiaList'>
+      <image class='addresIcon' src='../../images/center-ionc6.png' />
+      <text>分享砍价</text>
+      <text class='defual-adders'></text>
+      <text class='right-arrow arrowIcon arrowTo'></text>
+    </view>
+    <view class='public-user-box' bindtap="jumpGroup">
+      <image class='addresIcon' src='../../images/center-ionc7.png' />
+      <text>我的拼单</text>
+      <text class='right-arrow arrowIcon arrowTo'></text>
+    </view>
+  </view>
+</view>

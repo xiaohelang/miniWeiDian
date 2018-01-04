@@ -1,0 +1,14 @@
+<template name="isLabel">
+  <view class='public-detais-box'>
+    <view class='service-des'>
+      <view class='des-disbox'>
+        <image class='des-icon' src='../../images/pinzhi.png' />
+        <text>品质保证</text>
+      </view>
+      <view class='des-disbox'>
+        <image class='des-icon' src='../../images/tiexin.png' />
+        <text>贴心服务</text>
+      </view>
+    </view>
+  </view>
+</template>

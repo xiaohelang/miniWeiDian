@@ -1,0 +1,57 @@
+<!--pages/orderDetails/orderDetails.wxml-->
+<!--地址模块-->
+<view class='address-box' bindtap="jumpAddress" wx:if="{{ addressState }}">
+  <view class='icon-box'>
+    <image class='addres-icon' src='../../images/address.png' />
+  </view>
+  <view class='addres-contens'>
+     <view>
+        <text>姓名：{{ addressInfo.consignee }}</text>
+        <text class='iphonNumber'>{{ addressInfo.phone }}</text>
+     </view>
+     <text class='address-conten'>收货地址：{{ addressInfo.province }}{{ addressInfo.city }}{{ addressInfo.area }}{{ addressInfo.detailAddress }}</text>
+  </view>
+  <text class='facing-right'></text>
+</view>
+<!--填写地址模块-->
+<view class='delivery-address' wx:else bindtap='editAddressBtn'>
+  <text>添加收货地址</text>
+  <text class='facing-right addressIcon'></text>
+</view>
+<!--end-->
+<view class='orderProdust-box'>
+  <view class='proTitle'>
+    <image class='shopLogo' src='../../images/shop-icon.png'/>
+    <text>{{ vShopName }}</text>
+    <text class='play-state'>待付款</text>
+  </view>
+  <view class='produst-boxs'>
+    <image class='produstImg' src='{{ productImg }}' />
+    <view class='order-infor'>
+      <view class='infortion-box'>
+        <text class='informatName'>{{ productInfo.vShopProductName }}</text>
+        <text class='shop-price posit-pics'>￥{{ realPrice }}</text>
+      </view>
+      <view class='infortion-box spec-margin'>
+        <text class='informatName contansSpec'>{{ productInfo.subTitle }}</text>
+        <text class='contansSpec line-throuht posit-pics'>￥{{ productInfo.marketPrice }}</text>
+      </view>
+    </view>
+  </view>
+  <view class='product-footer'>
+     <text class='buy-text'>购买数量</text>
+     <view class='buy-boxing'>
+       <text class='public-btn' bindtap="bindMinus">-</text>
+       <input class='inputNumber' type='number' value='{{ num }}' disabled="false" />
+       <text class='public-btn' bindtap="bindAdd">+</text>
+     </view>
+  </view>
+</view>
+<view class='pay-method'>
+  <image class='watch-icon' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1504345524128&di=77a828b3600529fa18cb1066432d1121&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fzhidao%2Fwh%3D900%2C1200%2Fsign%3D971f02288a5494ee877707101dc5cccf%2Fa8014c086e061d956ebab4af7df40ad163d9caad.jpg' />
+  <text>微信支付</text>
+</view>
+<view class='order-foods'>
+  <text class='payment-btn'>立即支付</text>
+  <text class='pay-money-box'>实付款：<text class='money-color'><text class='max-money'>{{ realPrice * num }}</text>元</text></text>
+</view>

@@ -1,0 +1,49 @@
+<!--pages/orderPage/orderPage.wxml-->
+<import src="../common/vshop-tpl/vshop-tpl.wxml"/>
+<import src="../common/goodsInfo-tpl/goodsInfo-tpl.wxml"/>
+
+<view class='container'>
+  <view class='orderState-model'>
+    <text class='modelSta'>{{ items.stateType }}</text>
+    <image class='stateIcon' src='../../images/tis-icon1.png' />
+  </view>
+  <view class='address-box' bindtap="jumpAddress">
+    <view class='icon-box'>
+      <image class='addres-icon' src='../../images/address.png' />
+    </view>
+    <view class='addres-contens'>
+      <view>
+        <text>姓名：{{ items.userName }}</text>
+        <text class='iphonNumber'>{{ items.userIphone }}</text>
+      </view>
+      <text class='address-conten'>收货地址：{{ items.userAddress }}</text>
+    </view>
+  </view>
+  <view class='orderContants'>
+    <template is="isVshop" data="{{...items}}" />
+    <view class='orderPage-box'>
+      <template is="isgoods" data="{{...items}}" />
+    </view>
+    <view class='order-modle'>
+      <text>共 {{ items.num }} 件商品</text>
+      <text class='true-play'>实付 <text class='priceColor'>￥{{ items.totalMoney }}</text></text>
+    </view>
+  </view>
+  <!--消费二维码-->
+  <view class='consum-code' wx:if="{{ verfiCode }}">
+    <text class='code-text'>消费码：{{ items.verifyCode }}</text>
+    <image class='codeImg' src='{{ codeImg }}' />
+  </view>
+  <view class='transcation-info'>
+    <text class='info-box'>订单编码：{{ items.orderNo }}</text>
+    <text class='info-box'>交易时间：{{ items.orderTime }}</text>
+  </view>
+
+  <view class='orderFooter' wx:if="{{ fukuanState }}">
+    <text class='public-btn'>取消订单</text>
+    <text class='public-btn play-modle'>付款</text>
+  </view>
+  <view class='orderFooter' wx:if="{{ sureShouhuo }}">
+    <text class='public-btn play-modle' data-vOrderGuid="{{ items.vOrderGuid }}" bindtap='sureGoodBtn'>确认收货</text>
+  </view>
+</view>

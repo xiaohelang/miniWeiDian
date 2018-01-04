@@ -1,0 +1,151 @@
+/* pages/orderPage/orderPage.wxss */
+@import "../common/vshop-tpl/vshop-tpl.wxss";
+@import "../common/goodsInfo-tpl/goodsInfo-tpl.wxss";
+
+page{
+  background: #f4f4f4;
+}
+.orderState-model{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10rpx 36rpx;
+  background: #F96C9E;
+  font-size: 32rpx;
+  color: #fff;
+}
+.stateIcon{
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 500rpx;
+}
+.modelSta{
+  vertical-align: middle
+}
+.address-box{
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid #E8E8E8;
+  background: #fff;
+  padding: 28rpx 36rpx;
+  font-size: 28rpx;
+}
+.icon-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.addres-icon{
+  width: 32rpx;
+  height: 38rpx;
+  margin-right: 36rpx;
+}
+.addres-contens{
+  margin-right: 30rpx;
+}
+.iphonNumber{
+  float: right;
+}
+.address-conten{
+  display: inline-block;
+  margin-top: 20rpx;
+}
+.delivery-address{
+  display: flex;
+  flex-direction: row;
+  height: 90rpx;
+  line-height: 90rpx;
+  padding: 0 28rpx;
+  font-size: 28rpx;
+  background: #fff;
+  position: relative;
+  border-top: 1px solid #E8E8E8;
+}
+.orderContants{
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  margin-top: 11rpx;
+}
+.order-modle{
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 24rpx;
+  color: #333;
+  padding: 0 36rpx;
+}
+.true-play{
+  float: right
+}
+.priceColor{
+  color: #F96C9E;
+  font-size: 32rpx;
+}
+.orderPage-box{
+  background:rgb(244, 244, 244);
+  padding:18rpx 0;
+}
+.transcation-info{
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  margin-top: 11rpx;
+  font-size: 28rpx;
+  margin-bottom: 115rpx;
+}
+.info-box{
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 35rpx;
+  color: #8E8E8E;
+  border-bottom: 1px solid #E8E8E8
+}
+.consum-code{
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  margin-top: 11rpx;
+}
+.code-text{
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  padding: 0 36rpx;
+  border-bottom: 1px solid #E8E8E8
+}
+.codeImg{
+  width: 200rpx;
+  height: 200rpx;
+  margin: auto;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+.orderFooter{
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  width: 90%;
+  bottom: 0;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100rpx;
+  background: #fff;
+  padding: 0 36rpx;
+}
+.public-btn{
+  width: 150rpx;
+  /* height: 55rpx; */
+  line-height: 55rpx;
+  border-radius: 30rpx;
+  font-size: 28rpx;
+  border: 1px solid #8E8E8E;
+  text-align: center;
+  color: #8E8E8E;
+  box-sizing:border-box;
+  margin-left: 19rpx;
+}
+.play-modle{
+  background: #F96C9E;
+  color: #fff;
+  border: 1px solid #F96C9E;
+}

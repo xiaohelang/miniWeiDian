@@ -1,0 +1,129 @@
+<!--pages/details/details.wxml-->
+<import src="../common/grouplist-tpl/grouplist-tpl.wxml"/>
+<swiper class='swiper-box' indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{bannerList}}">
+    <swiper-item>
+      <image src="{{ item }}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class='details-box'>
+  <text class='detail-title'>{{ detailsInfo.vShopProductName }}</text>
+  <text class="detail-spec">{{ detailsInfo.subTitle }}</text>
+  <text class='price'><text class='price-compay'>￥</text>{{ price }}</text>
+  <view class='price-footer'>
+    <text>市场价：</text>
+    <text class='mark-price'>￥{{ detailsInfo.marketPrice }}元 </text>
+    <text class='groups-box' wx-if="{{ vGroupProductType == 1}}">累计成团{{ detailsInfo.groups }}次-{{ pingGrounpNum }}人拼团</text>
+    <text class='groups-box' wx:else>月售{{ detailsInfo.salesVolume}}件</text>
+  </view>
+</view>
+<!--开团模块-->
+<view wx-if="{{ vGroupProductType == 1 }}" class='public-detais-box group-box'>
+  <view class='group-title'>
+    <text>已开团</text>
+  </view>
+  <view class='groupTemple' wx-if="{{ groupList.length > 0 }}">
+    <block wx:for="{{ groupList }}" wx:for-item="items">
+      <view class="groupModel">
+        <template is="isgroupList" data="{{...items}}" />
+      </view>
+    </block>
+  </view>
+  <view wx:else class='noGroup'>暂无拼团</view>
+</view>
+<!-- <view class='public-detais-box'>
+  <view class='service-des'>
+    <view class='des-disbox'>
+      <image class='des-icon' src='../../images/pinzhi.png' />
+      <text>品质保证</text>
+    </view>
+    <view class='des-disbox'>
+      <image class='des-icon' src='../../images/tiexin.png' />
+      <text>贴心服务</text>
+    </view>
+  </view>
+</view> -->
+<!--拼团规则模块-->
+<view wx-if="{{ vGroupProductType == 1 }}" class='public-detais-box'>
+  <text class='team-rules'>拼团规则</text>
+  <view class='rules-box'>
+    <view class='rules-box-spec'>
+      <text class='rules-number'>1</text>
+      <text>选择商品</text>
+    </view>
+    <view class='rules-box-spec'>
+      <text class='rules-number'>2</text>
+      <text>参团</text>
+    </view>
+    <view class='rules-box-spec'>
+      <text class='rules-number'>3</text>
+      <text>邀请好友</text>
+    </view>
+    <view class='rules-box-spec'>
+      <text class='rules-number'>4</text>
+      <text>人满成团</text>
+    </view>
+  </view>
+</view>
+<!--用户评价模块-->
+<view class='public-detais-box' style='display:none'>
+  <view class='user-comment'>
+    <text>用户评价（好评率100%）</text>
+    <text class='read-comment'>查看评论（5656）</text>
+  </view>
+  <view class='user-comment-content'>
+    <view class='comment-list'>
+      <view class='comment-title'>
+        <image class='user-header' src='http://wenxiu-bucket.oss-cn-shenzhen.aliyuncs.com/upload/question/2017-08-24/c8fd811df22646b29ca9dd6119df018b1503555628359' />
+        <text>艾露莎</text>
+        <text class='commet-time'>2017.08.05</text>
+      </view>
+      <text class='comment-text'>植入的色素通过表皮层呈现出植入色泽，以达到掩盖瑕疵、扬长避 短、修饰美化的作用。</text>
+    </view>
+    <view class='comment-list'>
+      <view class='comment-title'>
+        <image class='user-header' src='http://wenxiu-bucket.oss-cn-shenzhen.aliyuncs.com/upload/question/2017-08-24/c8fd811df22646b29ca9dd6119df018b1503555628359' />
+        <text>艾露莎</text>
+        <text class='commet-time'>2017.08.05</text>
+      </view>
+      <text class='comment-text'>植入的色素通过表皮层呈现出植入色泽，以达到掩盖瑕疵、扬长避 短、修饰美化的作用。</text>
+    </view>
+  </view>
+</view>
+<!-- 商品详情 -->
+<view class='public-detais-box detail-contens'>
+ <view class='user-comment'>
+    <text>商品详情</text>
+  </view>
+  <view style='font-size:28rpx;'>好产品</view>
+</view>
+
+<view class='detail-footer-box'>
+  <view class='detail-model'>
+    <image class='detail-icon' src='../../images/selet-shop.png' />
+    <text>店铺</text>
+  </view>
+  <view class='detail-model'>
+    <image class='detail-icon' src='../../images/selet-shop.png' />
+    <text>分享</text>
+  </view>
+  <view wx-if="{{ vGroupProductType == 1 }}" class='pulic-footer'>
+    <view class='model-btn zhijiebtn' bindtap="sigerToBuy" data-id="{{ detailsInfo.vShopProductGuid }}">
+      <text class='model-padding'>直接购买</text>
+      <text class='buy-price'>￥{{ originaPrice }}</text>
+    </view>
+    <view class='model-btn' bindtap="groudToBuy" data-id="{{ detailsInfo.vShopProductGuid }}">
+      <text class='model-padding'>去开团({{ pingGrounpNum }}人)</text>
+      <text class='buy-price'>￥{{ price }}</text>
+    </view>
+  </view>
+  <view wx:elif='{{ vGroupProductType == 2 }}' class='pulic-footer'>
+    <text class='model-btn zhijiebtn vertical-btn' bindtap="sigerToBuy" data-id="{{ detailsInfo.vShopProductGuid }}">直接购买</text>
+    <text class='model-btn vertical-btn'>发起开价</text>
+  </view>
+  <view wx:else class='pulic-footer'>
+    <text class='buying-btn' bindtap="sigerToBuy" data-id="{{ detailsInfo.vShopProductGuid }}">直接购买</text>
+  </view>
+</view>

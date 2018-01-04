@@ -1,0 +1,42 @@
+<!--pages/groupSuccess/groupSuccess.wxml-->
+<import src="../common/user-tpl/user-tpl.wxml" />
+<view class='container'>
+  <view class='group-model'>
+    <template is="isUser" data="{{userItems}}" />
+    <view class='aut-places'>
+      <image style='width: 48rpx;height: 40rpx; margin-right: 12rpx' src='../../images/group-icon.png' />
+      <text>拼单成功</text>
+    </view>
+    <text class='s-people'>商家正在努力发货，请耐心等待！</text>
+  </view>
+  <view class='consum-code' wx:if="{{ verfiCode }}">
+    <text class='code-text'>消费码：{{ contactsData.verifyCode }}</text>
+    <image class='codeImg' src='{{ codeImg }}' />
+  </view>
+  <view class='address-messages'>
+    <view class='address-box'>
+      <text class='lable-title'>商品名称</text>
+      <text class='addressModel'>{{ contactsData.shopName }}</text>
+    </view>
+    <view class='address-box'>
+      <text class='lable-title'>收货人</text>
+      <text class='addressModel'>{{ contactsData.consignee }}</text>
+    </view>
+    <view class='address-box'>
+      <text class='lable-title'>联系电话</text>
+      <text class='addressModel'>{{ contactsData.iphone }}</text>
+    </view>
+    <view class='address-box' wx:if="{{ addressInfo }}">
+      <text class='lable-title'>收货地址</text>
+      <text class='addressModel'>{{ contactsData.detailAddress }}</text>
+    </view>
+    <view class='address-box' wx:if="{{ qqNumber }}">
+      <text class='lable-title'>qq号码</text>
+      <text class='addressModel'>{{ contactsData.qqNum }}</text>
+    </view>
+    <view class='address-box'>
+      <text class='lable-title'>拼单成功时间</text>
+      <text class='addressModel'>{{ contactsData.groupCompleteDate }}</text>
+    </view>
+  </view>
+</view>
